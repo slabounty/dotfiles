@@ -10,7 +10,7 @@ PROMPT='
 %~
 ${smiley}  %{$reset_color%}'
 
-RPROMPT='%{$fg[white]%} $(~/.rvm/bin/rvm-prompt)$(~/.zsh/bin/git-cwd-info.rb)%{$reset_color%}'
+RPROMPT='%{$fg[white]%} $(rbenv version-name)$(~/.zsh/bin/git-cwd-info.rb)%{$reset_color%}'
 
 # Set the term to xterm at 16 colors rather than the xterm-256color mode
 # which tells it to use 256 colors. It is important that terminal themes
@@ -48,9 +48,6 @@ set -o vi
 
 # This is necessary for the Ctrl-s keyboard shortcut to make it through to Vim
 stty -ixon
-
-# RVM
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 # Colors
 autoload -U colors
@@ -105,8 +102,6 @@ unsetopt nomatch
 
 # My default editor settings
 export EDITOR="vim"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
