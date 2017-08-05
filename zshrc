@@ -96,6 +96,10 @@ alias zr='z rspec --color'
 # Rails Test Reset
 alias betr='RAILS_ENV=test bundle exec rake db:migrate:reset'
 
+# Special screens
+# # $1 - screen config file name
+scr() { screen -c ~/screen_configs/$1 }
+
 # Make rake tasks run with parameters.
 # https://robots.thoughtbot.com/how-to-use-arguments-in-a-rake-task
 unsetopt nomatch
@@ -108,3 +112,10 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### For Homebrew ...
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+### For rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+### For AWS ... (acorns only)
+ssh-add -K ~/.ssh/id_rsa_aws
