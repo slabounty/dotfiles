@@ -108,7 +108,7 @@ unsetopt nomatch
 export EDITOR="vim"
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+#export PATH="/usr/local/heroku/bin:$PATH"
 
 ### For Homebrew ...
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
